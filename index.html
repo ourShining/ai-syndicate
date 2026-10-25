@@ -8,25 +8,26 @@
 <meta property="og:title" content="The AI Syndicate">
 <meta property="og:description" content="Bringing AI for the masses. Cinematic AI reels and films rooted in culture, myth and memory.">
 <meta property="og:type" content="website">
-<meta name="theme-color" content="#0b0a08">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 34 34' fill='none' stroke='%23e0b155' stroke-width='2.4'%3E%3Crect x='7' y='7' width='20' height='20' transform='rotate(45 17 17)'/%3E%3Ccircle cx='17' cy='17' r='4.5'/%3E%3C/svg%3E">
+<meta name="theme-color" content="#ffffff">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 34 34' fill='none' stroke='%232459e8' stroke-width='2.4'%3E%3Crect x='7' y='7' width='20' height='20' transform='rotate(45 17 17)'/%3E%3Ccircle cx='17' cy='17' r='4.5'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Manrope:wght@400;500;600;700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
 <script>document.documentElement.classList.add('js')</script>
 <style>
 :root {
-  --bg: #0b0a08;
-  --bg-2: #13110e;
-  --card: #171511;
-  --line: #2a2620;
-  --line-2: #3d382f;
-  --text: #f4efe6;
-  --muted: #c9c1b3;
-  --dim: #9a9284;
-  --gold: #e0b155;
-  --gold-hi: #f6d58e;
-  --ember: #e07a4f;
+  --bg: #ffffff;
+  --bg-2: #f3f7fd;
+  --card: #ffffff;
+  --line: #e2e9f4;
+  --line-2: #c9d6ea;
+  --text: #0b1b3a;
+  --muted: #45577a;
+  --dim: #7385a3;
+  --blue: #2459e8;
+  --blue-hi: #3b82f6;
+  --sky: #38bdf8;
+  --navy: #0a1f5c;
   --pad: clamp(20px, 5vw, 80px);
   --max: 1280px;
   --display: Syne, sans-serif;
@@ -42,29 +43,19 @@ body {
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
 }
-/* film grain over everything */
-body::after {
-  content: "";
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  z-index: 100;
-  opacity: .06;
-  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
-}
 a { color: inherit; text-decoration: none; }
-:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; border-radius: 6px; }
+:focus-visible { outline: 2px solid var(--blue); outline-offset: 3px; border-radius: 6px; }
 img, svg { display: block; }
 
 .wrap { width: 100%; max-width: var(--max); margin: 0 auto; padding: 0 var(--pad); }
 .eyebrow {
   display: inline-flex; align-items: center; gap: 12px;
-  font-size: 12px; font-weight: 700; letter-spacing: .26em; text-transform: uppercase; color: var(--gold);
+  font-size: 12px; font-weight: 700; letter-spacing: .26em; text-transform: uppercase; color: var(--blue);
 }
 .eyebrow::before { content: ""; width: 28px; height: 1px; background: currentColor; }
 .serif { font-family: var(--serif); font-style: italic; font-weight: 400; letter-spacing: 0; }
-.gold-text {
-  background: linear-gradient(100deg, var(--gold-hi), var(--gold) 45%, var(--ember));
+.blue-text {
+  background: linear-gradient(100deg, var(--navy), var(--blue) 45%, var(--sky));
   -webkit-background-clip: text; background-clip: text; color: transparent;
 }
 h1, h2, h3 { margin: 0; font-family: var(--display); font-weight: 800; letter-spacing: -.02em; }
@@ -75,19 +66,19 @@ p { margin: 0; }
   display: inline-flex; align-items: center; gap: 12px;
   height: 56px; padding: 0 28px; border-radius: 999px;
   font-weight: 600; font-size: 16px; white-space: nowrap;
-  transition: transform .25s, background .25s, border-color .25s, color .25s;
+  transition: transform .25s, background .25s, border-color .25s, color .25s, box-shadow .25s;
 }
 .btn svg { transition: transform .25s; }
 .btn:hover svg { transform: translateX(4px); }
-.btn-gold { background: var(--gold); color: #15120c; }
-.btn-gold:hover { background: var(--gold-hi); transform: translateY(-2px); }
+.btn-blue { background: var(--blue); color: #fff; box-shadow: 0 10px 30px -10px rgba(36,89,232,.6); }
+.btn-blue:hover { background: var(--blue-hi); transform: translateY(-2px); }
 .btn-ghost { border: 1px solid var(--line-2); }
-.btn-ghost:hover { border-color: var(--gold); color: var(--gold-hi); }
+.btn-ghost:hover { border-color: var(--blue); color: var(--blue); }
 
 /* NAV */
 .nav {
   position: sticky; top: 0; z-index: 50;
-  background: color-mix(in srgb, var(--bg) 72%, transparent);
+  background: rgba(255,255,255,.78);
   backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
   border-bottom: 1px solid var(--line);
 }
@@ -97,7 +88,7 @@ p { margin: 0; }
 .nav-links a:not(.btn) { position: relative; }
 .nav-links a:not(.btn)::after {
   content: ""; position: absolute; left: 0; right: 0; bottom: -6px; height: 1px;
-  background: var(--gold); transform: scaleX(0); transition: transform .3s; transform-origin: left;
+  background: var(--blue); transform: scaleX(0); transition: transform .3s; transform-origin: left;
 }
 .nav-links a:not(.btn):hover { color: var(--text); }
 .nav-links a:not(.btn):hover::after { transform: scaleX(1); }
@@ -109,11 +100,11 @@ p { margin: 0; }
   content: ""; position: absolute; z-index: -1; border-radius: 50%; filter: blur(90px);
   animation: drift 18s ease-in-out infinite alternate;
 }
-.hero::before { width: 620px; height: 620px; top: -180px; right: -120px; background: radial-gradient(circle, rgba(224,177,85,.38), transparent 65%); }
-.hero::after { width: 520px; height: 520px; bottom: -220px; left: -160px; background: radial-gradient(circle, rgba(224,122,79,.24), transparent 65%); animation-delay: -9s; }
+.hero::before { width: 640px; height: 640px; top: -200px; right: -140px; background: radial-gradient(circle, rgba(59,130,246,.35), transparent 65%); }
+.hero::after { width: 540px; height: 540px; bottom: -240px; left: -160px; background: radial-gradient(circle, rgba(56,189,248,.28), transparent 65%); animation-delay: -9s; }
 @keyframes drift { to { transform: translate(-60px, 50px) scale(1.12); } }
 .hero-grid {
-  position: absolute; inset: 0; z-index: -1; opacity: .5;
+  position: absolute; inset: 0; z-index: -1; opacity: .7;
   background-image: linear-gradient(var(--line) 1px, transparent 1px), linear-gradient(90deg, var(--line) 1px, transparent 1px);
   background-size: 88px 88px;
   mask-image: radial-gradient(ellipse at 70% 30%, #000 10%, transparent 65%);
@@ -128,9 +119,9 @@ p { margin: 0; }
 /* MARQUEE */
 .marquee { border-block: 1px solid var(--line); overflow: hidden; padding: 22px 0; background: var(--bg-2); }
 .marquee-track { display: flex; width: max-content; animation: scroll 38s linear infinite; }
-.marquee span { display: flex; align-items: center; gap: 40px; padding-right: 40px; font-family: var(--display); font-weight: 700; font-size: clamp(22px, 3vw, 34px); white-space: nowrap; color: var(--dim); }
-.marquee span i { font-family: var(--serif); font-weight: 400; color: var(--gold); }
-.marquee span b { width: 10px; height: 10px; border: 1.5px solid var(--gold); transform: rotate(45deg); }
+.marquee span { display: flex; align-items: center; gap: 40px; padding-right: 40px; font-family: var(--display); font-weight: 700; font-size: clamp(22px, 3vw, 34px); white-space: nowrap; color: var(--line-2); }
+.marquee span i { font-family: var(--serif); font-weight: 400; color: var(--blue); }
+.marquee span b { width: 10px; height: 10px; border: 1.5px solid var(--blue); transform: rotate(45deg); }
 @keyframes scroll { to { transform: translateX(-50%); } }
 
 section { padding: clamp(80px, 11vw, 150px) 0; }
@@ -141,37 +132,37 @@ section { padding: clamp(80px, 11vw, 150px) 0; }
 /* ABOUT */
 .about-grid { display: grid; grid-template-columns: 1fr 2fr; gap: 48px; }
 .manifesto { font-family: var(--display); font-weight: 700; font-size: clamp(28px, 3.6vw, 48px); line-height: 1.18; letter-spacing: -.01em; }
-.manifesto .serif { color: var(--gold-hi); font-size: 1.1em; }
+.manifesto .serif { color: var(--blue); font-size: 1.1em; }
 .about-body { margin-top: 40px; display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 32px; color: var(--muted); }
 .pillars { margin-top: 56px; display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid var(--line); }
 .pillar { padding: 28px 24px 0 0; }
 .pillar + .pillar { padding-left: 24px; border-left: 1px solid var(--line); }
-.pillar strong { display: block; font-family: var(--display); font-size: clamp(36px, 4vw, 52px); line-height: 1; color: var(--gold); }
+.pillar strong { display: block; font-family: var(--display); font-size: clamp(36px, 4vw, 52px); line-height: 1; color: var(--blue); }
 .pillar span { display: block; margin-top: 10px; font-size: 14px; color: var(--dim); letter-spacing: .04em; }
 
 /* MEMBERS */
 #members { background: var(--bg-2); border-block: 1px solid var(--line); }
-.members { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 20px; }
+.members { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 20px; }
 .member {
   position: relative; display: flex; flex-direction: column; gap: 18px;
   padding: 28px; border-radius: 22px; background: var(--card); border: 1px solid var(--line);
   transition: transform .35s, border-color .35s, box-shadow .35s;
 }
-.member:hover { transform: translateY(-6px); border-color: var(--line-2); box-shadow: 0 30px 60px -30px rgba(224,177,85,.35); }
+.member:hover { transform: translateY(-6px); border-color: var(--line-2); box-shadow: 0 30px 60px -30px rgba(36,89,232,.35); }
 .member .num { position: absolute; top: 24px; right: 26px; font-size: 12px; font-weight: 700; color: var(--dim); letter-spacing: .12em; }
 .avatar {
   width: 88px; height: 88px; border-radius: 50%; padding: 2px;
-  background: conic-gradient(from 210deg, var(--gold), var(--ember), #3d382f, var(--gold));
+  background: conic-gradient(from 210deg, var(--blue), var(--sky), #c9d6ea, var(--blue));
 }
 .avatar div {
   width: 100%; height: 100%; border-radius: 50%; background: var(--bg-2);
-  display: grid; place-items: center; font-family: var(--display); font-weight: 800; font-size: 26px; color: var(--gold-hi);
+  display: grid; place-items: center; font-family: var(--display); font-weight: 800; font-size: 26px; color: var(--blue);
 }
 .member h3 { font-size: 20px; letter-spacing: -.01em; }
 .member .who { margin-top: 4px; font-size: 15px; color: var(--muted); }
 .member .what { font-size: 14px; line-height: 1.55; color: var(--dim); flex: 1; }
-.member .handle { font-size: 14px; font-weight: 600; color: var(--gold); }
-.member.soon { border-style: dashed; }
+.member .handle { font-size: 14px; font-weight: 600; color: var(--blue); overflow-wrap: anywhere; }
+.member .handle:hover { color: var(--navy); }
 .member.soon .avatar { background: var(--line-2); }
 .member.soon .avatar div { color: var(--dim); }
 
@@ -179,52 +170,69 @@ section { padding: clamp(80px, 11vw, 150px) 0; }
 .reels { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
 .reel { margin: 0; }
 .reel-art {
-  position: relative; aspect-ratio: 9 / 16; border-radius: 20px; overflow: hidden; border: 1px solid var(--line);
-  display: flex; flex-direction: column; justify-content: space-between; padding: 22px;
-  transition: transform .45s;
+  position: relative; aspect-ratio: 9 / 16; border-radius: 20px; overflow: hidden;
+  display: flex; flex-direction: column; justify-content: space-between; padding: 22px; color: #fff;
+  transition: transform .45s, box-shadow .45s;
 }
-.reel:hover .reel-art { transform: scale(1.02); }
-.reel-art::after { content: ""; position: absolute; inset: 0; background: linear-gradient(transparent 45%, rgba(0,0,0,.75)); }
+.reel:hover .reel-art { transform: scale(1.02); box-shadow: 0 30px 60px -30px rgba(10,31,92,.5); }
+.reel-art::after { content: ""; position: absolute; inset: 0; background: linear-gradient(transparent 45%, rgba(5,15,45,.6)); }
 .reel-art > * { position: relative; z-index: 1; }
-.reel:nth-child(1) .reel-art { background: radial-gradient(circle at 30% 25%, #f6d58e 0, #b0702a 22%, #3a1d0c 55%, #0b0a08 90%); }
-.reel:nth-child(2) .reel-art { background: radial-gradient(circle at 70% 70%, #e07a4f 0, #7a2c1a 30%, #1d0d08 70%); }
-.reel:nth-child(3) .reel-art { background: radial-gradient(circle at 50% 30%, #7fb0e0 0, #23415e 30%, #0b111a 75%); }
-.reel:nth-child(4) .reel-art { background: radial-gradient(circle at 40% 60%, #c9a7f0 0, #4d3570 30%, #120c1c 75%); }
-.tag { align-self: flex-start; padding: 6px 12px; border-radius: 999px; font-size: 12px; font-weight: 600; letter-spacing: .08em; background: rgba(0,0,0,.35); border: 1px solid rgba(255,255,255,.18); backdrop-filter: blur(6px); }
-.play { width: 56px; height: 56px; border-radius: 50%; display: grid; place-items: center; background: rgba(255,255,255,.12); border: 1px solid rgba(255,255,255,.3); backdrop-filter: blur(6px); }
+.reel:nth-child(1) .reel-art { background: radial-gradient(circle at 30% 25%, #e0f2ff 0, #60a5fa 22%, #1e3a8a 60%, #0a1f5c 95%); }
+.reel:nth-child(2) .reel-art { background: radial-gradient(circle at 70% 70%, #a5f3fc 0, #0ea5e9 28%, #0c4a6e 70%); }
+.reel:nth-child(3) .reel-art { background: radial-gradient(circle at 50% 30%, #c7d2fe 0, #6366f1 30%, #1e1b4b 75%); }
+.reel:nth-child(4) .reel-art { background: radial-gradient(circle at 40% 60%, #bfdbfe 0, #2459e8 30%, #0b1b3a 75%); }
+.tag { align-self: flex-start; padding: 6px 12px; border-radius: 999px; font-size: 12px; font-weight: 600; letter-spacing: .08em; background: rgba(255,255,255,.16); border: 1px solid rgba(255,255,255,.35); backdrop-filter: blur(6px); }
+.play { width: 56px; height: 56px; border-radius: 50%; display: grid; place-items: center; background: rgba(255,255,255,.18); border: 1px solid rgba(255,255,255,.4); backdrop-filter: blur(6px); }
 .reel figcaption { margin-top: 16px; }
 .reel figcaption strong { display: block; font-family: var(--display); font-size: 20px; }
 .reel figcaption span { font-size: 14px; color: var(--dim); }
 
 /* COLLAB */
-#collab { border-top: 1px solid var(--line); }
+#collab { border-top: 1px solid var(--line); background: var(--bg-2); }
 .offers { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
 .offer {
   position: relative; padding: 40px 32px; border-radius: 22px; border: 1px solid var(--line); background: var(--card); overflow: hidden;
-  transition: border-color .35s, transform .35s;
+  transition: border-color .35s, transform .35s, box-shadow .35s;
 }
 .offer::before {
   content: ""; position: absolute; inset: 0; opacity: 0; transition: opacity .35s;
-  background: radial-gradient(circle at 100% 0, rgba(224,177,85,.18), transparent 60%);
+  background: radial-gradient(circle at 100% 0, rgba(59,130,246,.14), transparent 60%);
 }
-.offer:hover { border-color: var(--gold); transform: translateY(-4px); }
+.offer:hover { border-color: var(--blue); transform: translateY(-4px); box-shadow: 0 30px 60px -30px rgba(36,89,232,.35); }
 .offer:hover::before { opacity: 1; }
 .offer > * { position: relative; }
-.offer .n { font-family: var(--serif); font-style: italic; font-size: 44px; line-height: 1; color: var(--gold); }
+.offer .n { font-family: var(--serif); font-style: italic; font-size: 44px; line-height: 1; color: var(--blue); }
 .offer h3 { margin: 40px 0 14px; font-size: 26px; }
 .offer p { color: var(--muted); font-size: 16px; }
 
-/* CONTACT */
-.contact { position: relative; overflow: hidden; text-align: center; isolation: isolate; border-top: 1px solid var(--line); }
-.contact::before {
-  content: ""; position: absolute; z-index: -1; left: 50%; top: 50%; width: 900px; height: 900px; transform: translate(-50%, -50%);
-  background: radial-gradient(circle, rgba(224,177,85,.2), transparent 60%);
+/* CONTACT: the one deep-blue band */
+.contact {
+  position: relative; overflow: hidden; text-align: center; isolation: isolate; color: #fff;
+  background: radial-gradient(ellipse at 50% 0%, #2f6bff 0%, #1740b8 40%, var(--navy) 100%);
 }
+.contact::before {
+  content: ""; position: absolute; z-index: -1; inset: 0; opacity: .25;
+  background-image: linear-gradient(rgba(255,255,255,.15) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.15) 1px, transparent 1px);
+  background-size: 88px 88px;
+  mask-image: radial-gradient(ellipse at 50% 40%, #000 10%, transparent 70%);
+  -webkit-mask-image: radial-gradient(ellipse at 50% 40%, #000 10%, transparent 70%);
+}
+.contact .eyebrow { color: #bfdbfe; }
 .contact h2 { margin: 28px auto 44px; max-width: 1100px; font-size: clamp(40px, 6.6vw, 96px); line-height: .95; }
+.contact h2 .serif { color: #bae6fd; }
 .contact .hero-ctas { justify-content: center; }
+.btn-white { background: #fff; color: var(--navy); }
+.btn-white:hover { transform: translateY(-2px); box-shadow: 0 14px 40px -12px rgba(0,0,0,.45); }
+.emails { margin-top: 40px; display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; }
+.emails a {
+  padding: 10px 18px; border-radius: 999px; font-size: 15px; font-weight: 500;
+  border: 1px solid rgba(255,255,255,.3); background: rgba(255,255,255,.08); transition: background .25s, border-color .25s;
+}
+.emails a:hover { background: rgba(255,255,255,.18); border-color: #fff; }
 
-footer { border-top: 1px solid var(--line); padding: 36px 0; font-size: 14px; color: var(--dim); }
+footer { padding: 36px 0; font-size: 14px; color: var(--dim); }
 footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 16px; }
+footer .brand { color: var(--text); }
 
 /* scroll reveal: only hides content once JS has confirmed it can show it again */
 .js .reveal { opacity: 0; transform: translateY(28px); transition: opacity .9s cubic-bezier(.2,.7,.2,1), transform .9s cubic-bezier(.2,.7,.2,1); }
@@ -253,7 +261,7 @@ footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; a
 <header class="nav">
   <div class="wrap">
     <a href="#top" class="brand" aria-label="The AI Syndicate home">
-      <svg width="30" height="30" viewBox="0 0 34 34" fill="none" stroke="#e0b155" stroke-width="2" aria-hidden="true"><rect x="5" y="5" width="24" height="24" transform="rotate(45 17 17)"/><circle cx="17" cy="17" r="5"/></svg>
+      <svg width="30" height="30" viewBox="0 0 34 34" fill="none" stroke="#2459e8" stroke-width="2" aria-hidden="true"><rect x="5" y="5" width="24" height="24" transform="rotate(45 17 17)"/><circle cx="17" cy="17" r="5"/></svg>
       THE AI SYNDICATE
     </a>
     <nav class="nav-links" aria-label="Main">
@@ -272,11 +280,11 @@ footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; a
   <div class="hero-grid" aria-hidden="true"></div>
   <div class="wrap">
     <div class="eyebrow reveal">A collective of AI visual storytellers</div>
-    <h1 class="reveal">Bringing AI<br><span class="serif gold-text">for the masses</span></h1>
+    <h1 class="reveal">Bringing AI<br><span class="serif blue-text">for the masses</span></h1>
     <div class="hero-foot reveal">
       <p>Independent creators making cinematic, AI-crafted reels and films — rooted in culture, myth and memory, built for the feed.</p>
       <div class="hero-ctas">
-        <a href="#work" class="btn btn-gold">See our work
+        <a href="#work" class="btn btn-blue">See our work
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
         <a href="#collab" class="btn btn-ghost">Work with us</a>
       </div>
@@ -301,7 +309,7 @@ footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; a
         <p>From temple legends to everyday memories, we turn the stories of our culture into films anyone can watch, share and feel.</p>
       </div>
       <div class="pillars reveal">
-        <div class="pillar"><strong>05</strong><span>Independent studios</span></div>
+        <div class="pillar"><strong>04</strong><span>Independent studios</span></div>
         <div class="pillar"><strong>01</strong><span>Shared banner</span></div>
         <div class="pillar"><strong>∞</strong><span>Stories left to tell</span></div>
       </div>
@@ -314,42 +322,39 @@ footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; a
     <div class="sec-head">
       <div>
         <div class="eyebrow reveal">02 — The members</div>
-        <h2 class="reveal">The <span class="serif gold-text">syndicate</span></h2>
+        <h2 class="reveal">The <span class="serif blue-text">syndicate</span></h2>
       </div>
-      <p class="reveal">Five creators, five signatures. Follow each studio on Instagram.</p>
+      <p class="reveal">Four creators, four signatures. Reach any studio directly.</p>
     </div>
-    <!-- To add a member: copy the first card, change the text, and remove class "soon". -->
+    <!-- To fill a member: change the name/studio/text and remove class "soon". -->
     <div class="members">
       <article class="member reveal">
         <span class="num">01</span>
         <div class="avatar"><div>KF</div></div>
         <div><h3>Kalaiforge</h3><div class="who">Sreedhar Palanichamy</div></div>
         <p class="what">Devotional films drawn from Tamil and Hindu mythology.</p>
-        <a class="handle" href="#members">Instagram →</a>
+        <a class="handle" href="mailto:studiokalai07@gmail.com">studiokalai07@gmail.com</a>
       </article>
       <article class="member soon reveal">
         <span class="num">02</span>
         <div class="avatar"><div>?</div></div>
         <div><h3>Studio reveal</h3><div class="who">Coming soon</div></div>
         <p class="what">A new signature style joins the syndicate.</p>
+        <a class="handle" href="mailto:suseendar@bikfix.co.uk">suseendar@bikfix.co.uk</a>
       </article>
       <article class="member soon reveal">
         <span class="num">03</span>
         <div class="avatar"><div>?</div></div>
         <div><h3>Studio reveal</h3><div class="who">Coming soon</div></div>
         <p class="what">A new signature style joins the syndicate.</p>
+        <a class="handle" href="mailto:redmechand031@gmail.com">redmechand031@gmail.com</a>
       </article>
       <article class="member soon reveal">
         <span class="num">04</span>
         <div class="avatar"><div>?</div></div>
         <div><h3>Studio reveal</h3><div class="who">Coming soon</div></div>
         <p class="what">A new signature style joins the syndicate.</p>
-      </article>
-      <article class="member soon reveal">
-        <span class="num">05</span>
-        <div class="avatar"><div>?</div></div>
-        <div><h3>Studio reveal</h3><div class="who">Coming soon</div></div>
-        <p class="what">A new signature style joins the syndicate.</p>
+        <a class="handle" href="mailto:vigneshmanikandan21@gmail.com">vigneshmanikandan21@gmail.com</a>
       </article>
     </div>
   </div>
@@ -360,7 +365,7 @@ footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; a
     <div class="sec-head">
       <div>
         <div class="eyebrow reveal">03 — Selected work</div>
-        <h2 class="reveal">Reels <span class="serif gold-text">&amp;</span> films</h2>
+        <h2 class="reveal">Reels <span class="serif blue-text">&amp;</span> films</h2>
       </div>
       <p class="reveal">Our first collective drop is in the edit. Here's what we're exploring.</p>
     </div>
@@ -390,7 +395,7 @@ footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; a
     <div class="sec-head">
       <div>
         <div class="eyebrow reveal">04 — Collaborate</div>
-        <h2 class="reveal">Bring us <span class="serif gold-text">your story.</span></h2>
+        <h2 class="reveal">Bring us <span class="serif blue-text">your story.</span></h2>
       </div>
     </div>
     <div class="offers">
@@ -402,7 +407,7 @@ footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; a
       <div class="offer reveal">
         <div class="n">ii.</div>
         <h3>Collective drops</h3>
-        <p>Themed series where all five studios interpret one idea, released across every member's audience.</p>
+        <p>Themed series where all four studios interpret one idea, released across every member's audience.</p>
       </div>
       <div class="offer reveal">
         <div class="n">iii.</div>
@@ -416,12 +421,16 @@ footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; a
 <section class="contact" id="contact">
   <div class="wrap">
     <div class="eyebrow reveal">05 — Get in touch</div>
-    <h2 class="reveal">Let’s make something <span class="serif gold-text">unforgettable.</span></h2>
+    <h2 class="reveal">Let’s make something <span class="serif">unforgettable.</span></h2>
     <div class="hero-ctas reveal">
-      <!-- TODO: put the syndicate email after "mailto:" and the Instagram link in the second button -->
-      <a href="mailto:" class="btn btn-gold">Email us
+      <a href="mailto:studiokalai07@gmail.com,suseendar@bikfix.co.uk,redmechand031@gmail.com,vigneshmanikandan21@gmail.com?subject=Hello%20AI%20Syndicate" class="btn btn-white">Email the whole syndicate
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-      <a href="#contact" class="btn btn-ghost">DM on Instagram</a>
+    </div>
+    <div class="emails reveal">
+      <a href="mailto:studiokalai07@gmail.com">studiokalai07@gmail.com</a>
+      <a href="mailto:suseendar@bikfix.co.uk">suseendar@bikfix.co.uk</a>
+      <a href="mailto:redmechand031@gmail.com">redmechand031@gmail.com</a>
+      <a href="mailto:vigneshmanikandan21@gmail.com">vigneshmanikandan21@gmail.com</a>
     </div>
   </div>
 </section>
