@@ -190,32 +190,7 @@ section { padding: clamp(96px, 12vw, 170px) 0; }
 .member .mail:hover svg { transform: rotate(-45deg); }
 .member.soon .mono { background: var(--bg-2); color: var(--dim); border: 1px dashed var(--line-2); box-shadow: none; }
 
-/* WORK */
-.reels { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
-.reel { margin: 0; }
-.reel:nth-child(even) { margin-top: 56px; }
-.reel-art {
-  position: relative; aspect-ratio: 9 / 16; border-radius: 24px; overflow: hidden; color: #fff;
-  display: flex; flex-direction: column; justify-content: space-between; padding: 20px;
-  transition: transform .6s var(--ease), box-shadow .6s var(--ease);
-}
-.reel-art::before { content: ""; position: absolute; inset: -20%; background: inherit; transition: transform 1.2s var(--ease); z-index: 0; }
-.reel:hover .reel-art { transform: translateY(-6px); box-shadow: 0 40px 80px -40px rgba(7,18,51,.6); }
-.reel:hover .reel-art::before { transform: scale(1.12) rotate(4deg); }
-.reel-art::after { content: ""; position: absolute; inset: 0; background: linear-gradient(transparent 50%, rgba(4,10,30,.55)); z-index: 0; }
-.reel-art > * { position: relative; z-index: 1; }
-.reel:nth-child(1) .reel-art { background: radial-gradient(circle at 30% 25%, #eaf4ff 0, #6aa8ff 22%, #1e3a8a 60%, #071233 95%); }
-.reel:nth-child(2) .reel-art { background: radial-gradient(circle at 70% 70%, #d6f3ff 0, #38a3f0 28%, #0c3f6e 70%, #061a33 100%); }
-.reel:nth-child(3) .reel-art { background: radial-gradient(circle at 50% 30%, #e0e4ff 0, #6670f0 30%, #1e1b4b 75%); }
-.reel:nth-child(4) .reel-art { background: radial-gradient(circle at 40% 60%, #dbe8ff 0, #1e4bd8 30%, #071233 75%); }
-.tag { align-self: flex-start; padding: 6px 12px; border-radius: 999px; font-size: 10px; font-weight: 700; letter-spacing: .2em; background: rgba(255,255,255,.14); border: 1px solid rgba(255,255,255,.35); backdrop-filter: blur(8px); }
-.reel-art .bottom { display: flex; justify-content: space-between; align-items: end; }
-.reel-art .bottom span { font-family: var(--serif); font-style: italic; font-size: 26px; line-height: 1; }
-.play { width: 48px; height: 48px; border-radius: 50%; display: grid; place-items: center; background: #fff; color: var(--navy); }
-.reel figcaption { margin-top: 16px; display: flex; justify-content: space-between; font-size: 13px; color: var(--dim); }
-.reel figcaption strong { color: var(--text); font-weight: 600; }
 
-/* COLLAB */
 #collab { border-top: 1px solid var(--line); }
 .offers { border-top: 1px solid var(--text); }
 .offer {
@@ -264,12 +239,12 @@ footer { padding: 72px 0 32px; overflow: hidden; }
 /* scroll reveal: only hides content once JS has confirmed it can show it again */
 .js .reveal { opacity: 0; transform: translateY(32px); transition: opacity 1.1s var(--ease), transform 1.1s var(--ease); }
 .js .reveal.in { opacity: 1; transform: none; }
-.js .members .reveal:nth-child(2), .js .reels .reveal:nth-child(2) { transition-delay: .08s; }
-.js .members .reveal:nth-child(3), .js .reels .reveal:nth-child(3) { transition-delay: .16s; }
-.js .members .reveal:nth-child(4), .js .reels .reveal:nth-child(4) { transition-delay: .24s; }
+.js .members .reveal:nth-child(2) { transition-delay: .08s; }
+.js .members .reveal:nth-child(3) { transition-delay: .16s; }
+.js .members .reveal:nth-child(4) { transition-delay: .24s; }
 
 @media (max-width: 1024px) {
-  .members, .reels { grid-template-columns: repeat(2, 1fr); }
+  .members { grid-template-columns: repeat(2, 1fr); }
   .head { grid-template-columns: 1fr; }
   .offer { grid-template-columns: 60px 1fr 56px; }
   .offer p { grid-column: 2 / 3; }
@@ -285,7 +260,6 @@ footer { padding: 72px 0 32px; overflow: hidden; }
   .stat + .stat { padding-left: 0; border-left: 0; border-top: 1px solid var(--line); margin-top: 32px; }
   .head .aside { flex-direction: column; align-items: start; }
   .member { min-height: 0; }
-  .reel:nth-child(even) { margin-top: 32px; }
   .offer { grid-template-columns: 1fr 48px; gap: 12px 20px; }
   .offer .n { grid-column: 1 / -1; }
   .offer h3 { grid-column: 1; }
@@ -312,7 +286,6 @@ footer { padding: 72px 0 32px; overflow: hidden; }
   <nav class="nav-links" aria-label="Main">
     <a href="#about">About</a>
     <a href="#members">Members</a>
-    <a href="#work">Work</a>
     <a href="#collab">Collaborate</a>
     <a href="#contact" class="btn btn-dark">Get in touch</a>
   </nav>
@@ -331,7 +304,7 @@ footer { padding: 72px 0 32px; overflow: hidden; }
       <p>Independent creators making cinematic, AI-crafted reels and films — rooted in culture, myth and memory, built for the feed.</p>
       <div class="ctas">
         <a href="#collab" class="btn btn-line">Work with us</a>
-        <a href="#work" class="btn btn-dark">See our work
+        <a href="#contact" class="btn btn-dark">Get in touch
           <span class="arrow"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
       </div>
     </div>
@@ -404,40 +377,10 @@ footer { padding: 72px 0 32px; overflow: hidden; }
   </div>
 </section>
 
-<section id="work">
-  <div class="wrap">
-    <div class="head">
-      <div class="label reveal"><b>03</b> Selected work</div>
-      <div class="aside">
-        <h2 class="reveal">Reels <em class="ink">&amp;</em> films</h2>
-        <p class="reveal">Our first collective drop is in the edit. Here's what we're exploring.</p>
-      </div>
-    </div>
-    <div class="reels">
-      <figure class="reel reveal">
-        <div class="reel-art"><span class="tag">MYTH</span><div class="bottom"><span>Gods &amp;<br>legends</span><span class="play"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></span></div></div>
-        <figcaption><strong>Chapter I</strong><span>Dropping soon</span></figcaption>
-      </figure>
-      <figure class="reel reveal">
-        <div class="reel-art"><span class="tag">RITUAL</span><div class="bottom"><span>Festival<br>fire</span><span class="play"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></span></div></div>
-        <figcaption><strong>Chapter II</strong><span>Dropping soon</span></figcaption>
-      </figure>
-      <figure class="reel reveal">
-        <div class="reel-art"><span class="tag">MEMORY</span><div class="bottom"><span>Monsoon<br>nights</span><span class="play"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></span></div></div>
-        <figcaption><strong>Chapter III</strong><span>Dropping soon</span></figcaption>
-      </figure>
-      <figure class="reel reveal">
-        <div class="reel-art"><span class="tag">FOLKLORE</span><div class="bottom"><span>Grandmother's<br>tales</span><span class="play"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></span></div></div>
-        <figcaption><strong>Chapter IV</strong><span>Dropping soon</span></figcaption>
-      </figure>
-    </div>
-  </div>
-</section>
-
 <section id="collab">
   <div class="wrap">
     <div class="head">
-      <div class="label reveal"><b>04</b> Collaborate</div>
+      <div class="label reveal"><b>03</b> Collaborate</div>
       <h2 class="reveal">Bring us <em class="ink">your story.</em></h2>
     </div>
     <div class="offers">
@@ -466,7 +409,7 @@ footer { padding: 72px 0 32px; overflow: hidden; }
 <section class="contact" id="contact">
   <div class="contact-card">
     <div class="orb" aria-hidden="true"></div>
-    <div class="label reveal"><b style="color:#7cc4ff">05</b> Get in touch</div>
+    <div class="label reveal"><b style="color:#7cc4ff">04</b> Get in touch</div>
     <h2 class="reveal">Let’s make something <em>unforgettable.</em></h2>
     <div class="ctas reveal">
       <a href="mailto:studiokalai07@gmail.com,suseendar@bikfix.co.uk,redmechand031@gmail.com,vigneshmanikandan21@gmail.com?subject=Hello%20AI%20Syndicate" class="btn btn-white">Email the whole syndicate
