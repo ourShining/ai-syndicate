@@ -191,6 +191,22 @@ section { padding: clamp(96px, 12vw, 170px) 0; }
 .member.soon .mono { background: var(--bg-2); color: var(--dim); border: 1px dashed var(--line-2); box-shadow: none; }
 
 
+/* SPOTLIGHT */
+.spotlight {
+  margin-top: 16px; display: grid; grid-template-columns: 1fr 1.6fr; gap: clamp(32px, 5vw, 72px);
+  padding: clamp(28px, 4.5vw, 64px); background: #fff; border: 1px solid var(--line); border-radius: 28px;
+  scroll-margin-top: 100px;
+}
+.spotlight .side { display: flex; flex-direction: column; gap: 22px; align-items: flex-start; }
+.spotlight h3 { font-size: clamp(44px, 5vw, 72px); line-height: .95; letter-spacing: -.03em; }
+.spotlight .who { margin-top: 10px; color: var(--muted); }
+.tags { display: flex; flex-wrap: wrap; gap: 8px; }
+.tags span { padding: 7px 14px; border-radius: 999px; font-size: 12px; font-weight: 600; color: var(--blue); background: #eef3ff; border: 1px solid #dbe5ff; }
+.spotlight .bio { display: flex; flex-direction: column; gap: 20px; color: var(--muted); }
+.spotlight .bio .lead { font-family: var(--serif); font-size: clamp(24px, 2.4vw, 32px); line-height: 1.25; color: var(--text); }
+.member .more { font-size: 13px; font-weight: 600; color: var(--text); text-decoration: underline; text-underline-offset: 4px; text-decoration-color: var(--line-2); }
+.member .more:hover { text-decoration-color: var(--blue); }
+
 #collab { border-top: 1px solid var(--line); }
 .offers { border-top: 1px solid var(--text); }
 .offer {
@@ -260,6 +276,7 @@ footer { padding: 72px 0 32px; overflow: hidden; }
   .stat + .stat { padding-left: 0; border-left: 0; border-top: 1px solid var(--line); margin-top: 32px; }
   .head .aside { flex-direction: column; align-items: start; }
   .member { min-height: 0; }
+  .spotlight { grid-template-columns: 1fr; }
   .offer { grid-template-columns: 1fr 48px; gap: 12px 20px; }
   .offer .n { grid-column: 1 / -1; }
   .offer h3 { grid-column: 1; }
@@ -350,6 +367,7 @@ footer { padding: 72px 0 32px; overflow: hidden; }
         <div class="mono">K</div>
         <div><h3>Kalaiforge</h3><div class="who">Sreedhar Palanichamy</div></div>
         <p class="what">Devotional films drawn from Tamil and Hindu mythology.</p>
+        <a class="more" href="#kalaiforge">Read bio ↓</a>
         <a class="mail" href="mailto:studiokalai07@gmail.com">studiokalai07@<wbr>gmail.com <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
       </article>
       <article class="member soon reveal">
@@ -374,6 +392,24 @@ footer { padding: 72px 0 32px; overflow: hidden; }
         <a class="mail" href="mailto:vigneshmanikandan21@gmail.com">vigneshmanikandan21@<wbr>gmail.com <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
       </article>
     </div>
+    <article class="spotlight reveal" id="kalaiforge">
+      <div class="side">
+        <div class="label"><b>01</b> Member spotlight</div>
+        <div class="mono">K</div>
+        <div><h3>Kalai<em class="ink">forge</em></h3><div class="who">Sreedhar Palanichamy</div></div>
+        <div class="tags">
+          <span>Tech &amp; AI Enthusiast</span><span>Generative AI</span><span>Digital Content Creation</span><span>Tech Tips &amp; Tricks</span><span>Creative Innovation</span>
+        </div>
+        <a href="mailto:studiokalai07@gmail.com" class="btn btn-dark">Email Kalaiforge
+          <span class="arrow"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+      </div>
+      <div class="bio">
+        <p class="lead">I’m passionate about exploring the world of technology, Artificial Intelligence, and digital innovation.</p>
+        <p>I create content around emerging AI tools, useful tech tips, productivity hacks, and digital tricks that make everyday tasks easier, smarter, and more efficient.</p>
+        <p>I enjoy experimenting with generative AI, AI-powered image and video creation, automation tools, and emerging technologies to discover new possibilities and turn creative ideas into reality. Through my content, I aim to simplify complex technologies, share practical insights, and help people discover tools and techniques they can use in their everyday lives.</p>
+        <p>I believe technology should empower creativity, simplify work, and open up new opportunities. I’m constantly exploring new tools, testing innovative ideas, and sharing what I learn along the way—all with a focus on making tech accessible, useful, and exciting for everyone.</p>
+      </div>
+    </article>
   </div>
 </section>
 
