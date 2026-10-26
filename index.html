@@ -204,6 +204,9 @@ section { padding: clamp(96px, 12vw, 170px) 0; }
 .tags span { padding: 7px 14px; border-radius: 999px; font-size: 12px; font-weight: 600; color: var(--blue); background: #eef3ff; border: 1px solid #dbe5ff; }
 .spotlight .bio { display: flex; flex-direction: column; gap: 20px; color: var(--muted); }
 .spotlight .bio .lead { font-family: var(--serif); font-size: clamp(24px, 2.4vw, 32px); line-height: 1.25; color: var(--text); }
+.areas { list-style: none; margin: 4px 0 0; padding: 0; border-top: 1px solid var(--line); }
+.areas li { padding: 18px 0; border-bottom: 1px solid var(--line); }
+.areas strong { display: block; margin-bottom: 4px; color: var(--text); font-weight: 600; }
 .member .more { font-size: 13px; font-weight: 600; color: var(--text); text-decoration: underline; text-underline-offset: 4px; text-decoration-color: var(--line-2); }
 .member .more:hover { text-decoration-color: var(--blue); }
 
@@ -357,7 +360,7 @@ footer { padding: 72px 0 32px; overflow: hidden; }
       <div class="label reveal"><b>02</b> The members</div>
       <div class="aside">
         <h2 class="reveal">The <em class="ink">syndicate</em></h2>
-        <p class="reveal">Four creators, four signatures. Reach any studio directly.</p>
+        <p class="reveal">Four creators, four signatures. Reach any member directly.</p>
       </div>
     </div>
     <!-- To fill a member: change the name/studio/text and remove class "soon". -->
@@ -370,11 +373,12 @@ footer { padding: 72px 0 32px; overflow: hidden; }
         <a class="more" href="#sreetalks">Also creates as sreetalks.ai ↓</a>
         <a class="mail" href="mailto:studiokalai07@gmail.com">studiokalai07@<wbr>gmail.com <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
       </article>
-      <article class="member soon reveal">
+      <article class="member reveal">
         <span class="num">02 / 04</span>
-        <div class="mono">?</div>
-        <div><h3>Studio reveal</h3><div class="who">Coming soon</div></div>
-        <p class="what">A new signature style joins the syndicate.</p>
+        <div class="mono">S</div>
+        <div><h3>Suseendar</h3><div class="who">Forward Deployed AI Engineer</div></div>
+        <p class="what">AI agents, automation and AI training for teams and businesses.</p>
+        <a class="more" href="#suseendar">Read profile ↓</a>
         <a class="mail" href="mailto:suseendar@bikfix.co.uk">suseendar@<wbr>bikfix.co.uk <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
       </article>
       <article class="member soon reveal">
@@ -408,6 +412,28 @@ footer { padding: 72px 0 32px; overflow: hidden; }
         <p>I create content around emerging AI tools, useful tech tips, productivity hacks, and digital tricks that make everyday tasks easier, smarter, and more efficient.</p>
         <p>I enjoy experimenting with generative AI, AI-powered image and video creation, automation tools, and emerging technologies to discover new possibilities and turn creative ideas into reality. Through my content, I aim to simplify complex technologies, share practical insights, and help people discover tools and techniques they can use in their everyday lives.</p>
         <p>I believe technology should empower creativity, simplify work, and open up new opportunities. I’m constantly exploring new tools, testing innovative ideas, and sharing what I learn along the way—all with a focus on making tech accessible, useful, and exciting for everyone.</p>
+      </div>
+    </article>
+    <article class="spotlight reveal" id="suseendar">
+      <div class="side">
+        <div class="label"><b>02</b> Member spotlight</div>
+        <div class="mono">S</div>
+        <div><h3>Suseen<em class="ink">dar</em></h3><div class="who">Forward Deployed AI Engineer</div></div>
+        <div class="tags">
+          <span>AI Agents</span><span>Automation</span><span>AI Adoption</span><span>AI Training</span><span>Forward Deployed Engineering</span>
+        </div>
+        <a href="mailto:suseendar@bikfix.co.uk" class="btn btn-dark">Email Suseendar
+          <span class="arrow"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+      </div>
+      <div class="bio">
+        <p class="lead">Forward Deployed AI engineers who embed with your team, build AI agents that work inside your business, and train your people to use them.</p>
+        <p>We don’t hand you a strategy deck and leave. We work directly with your team, inside your tools, data and workflows. We find where AI can save time or money, then we build it, deploy it, and stay until it’s working in practice — and we make sure your team can run and improve the system after we leave.</p>
+        <ul class="areas">
+          <li><strong>AI agents and automation</strong>Custom agents that handle repetitive work, support customers, process documents and connect your tools.</li>
+          <li><strong>AI adoption inside your organisation</strong>Finding the highest-value use cases, building them, and integrating them into your current stack.</li>
+          <li><strong>AI training</strong>Helping professionals build the skills to get AI jobs, and teaching teams to use AI effectively in their projects and workspace.</li>
+        </ul>
+        <p>We’ve delivered for SaaS companies and small-scale businesses, so we understand both product teams and owner-run operations where every hour counts. We focus on what is useful and measurable, not on hype.</p>
       </div>
     </article>
   </div>
