@@ -132,7 +132,14 @@ html:has(dialog[open]) { overflow: hidden; }
 .bio-links { margin-top: 28px; padding-top: 20px; border-top: 1px solid var(--line); display: flex; flex-wrap: wrap; gap: 8px 28px; font-size: 14px; font-weight: 600; color: var(--blue); }
 .bio-links a:hover { color: var(--navy); }
 
+/* hero announcement */
+.announce { display: inline-flex; align-items: center; gap: 12px; margin-bottom: 28px; padding: 6px 16px 6px 6px; border-radius: 999px; background: rgba(255,255,255,.7); border: 1px solid var(--line-2); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); font-size: 14px; font-weight: 600; transition: border-color .3s, transform .4s var(--ease); }
+.announce:hover { border-color: var(--blue); transform: translateY(-2px); }
+.announce .new { padding: 4px 10px; border-radius: 999px; background: var(--blue); color: #fff; font-size: 11px; letter-spacing: .12em; text-transform: uppercase; }
+.hero .label { display: flex; width: fit-content; }
+
 /* workshop */
+#workshop { background: var(--bg-2); }
 .workshop { display: grid; grid-template-columns: 1fr 1.25fr; gap: clamp(32px, 5vw, 72px); align-items: start; }
 .workshop .intro { position: sticky; top: 110px; }
 .workshop h2 { font-size: clamp(40px, 5vw, 72px); line-height: 1; letter-spacing: -.03em; margin: 24px 0; }
@@ -185,10 +192,10 @@ footer .wrap { border-top: 1px solid rgba(255,255,255,.12); padding-top: 32px; }
 <nav class="nav" aria-label="Main">
   <a href="#top" class="brand">THE AI SYNDICATE</a>
   <div class="nav-links">
+    <a href="#workshop">Workshop</a>
     <a href="#services">Services</a>
     <a href="#process">How we work</a>
     <a href="#team">Team</a>
-    <a href="#workshop">Workshop</a>
     <a href="#work">Work</a>
     <a href="#contact" class="btn btn-dark">Start a project <span class="arrow" aria-hidden="true">&rarr;</span></a>
   </div>
@@ -198,6 +205,7 @@ footer .wrap { border-top: 1px solid rgba(255,255,255,.12); padding-top: 32px; }
   <div class="hero">
     <div class="orb" aria-hidden="true"></div>
     <div class="wrap">
+      <a class="announce" href="#workshop"><span class="new">New</span> AI workshop — tell us what you want to learn <span aria-hidden="true">&rarr;</span></a>
       <span class="label">Now taking client projects</span>
       <h1>Everything AI, <em class="ink">under one roof.</em></h1>
       <div class="hero-foot">
@@ -216,6 +224,25 @@ footer .wrap { border-top: 1px solid rgba(255,255,255,.12); padding-top: 32px; }
       <span>AI agents <b></b> <em>Automation</em> <b></b> Video <b></b> <em>Visuals</em> <b></b> Editing <b></b> <em>Training</em> <b></b> Strategy <b></b></span>
     </div>
   </div>
+
+  <section id="workshop">
+    <div class="wrap workshop">
+      <div class="intro">
+        <span class="label">Upcoming AI workshop</span>
+        <h2>Learn AI with us. <em class="ink">Tell us what you need.</em></h2>
+        <p>We’re planning a hands-on AI workshop and want to shape it around you. Take two minutes to tell us what you’d like to learn, and we’ll build the session around the answers.</p>
+        <ul class="asks">
+          <li><span>i.</span>What you want to learn — agents, automation, AI video, visuals or careers in AI</li>
+          <li><span>ii.</span>Your current level, from complete beginner to already building</li>
+          <li><span>iii.</span>The format and timing that work best for you</li>
+        </ul>
+        <a class="btn btn-dark" href="https://docs.google.com/forms/d/e/1FAIpQLSdOhxqB93n7zOKw4Zw4-auWqzR7NUHyOoUPzvlJFbhqSE-ECw/viewform" target="_blank" rel="noopener">Open the form in a new tab <span class="arrow" aria-hidden="true">&nearr;</span></a>
+      </div>
+      <div class="form-card">
+        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdOhxqB93n7zOKw4Zw4-auWqzR7NUHyOoUPzvlJFbhqSE-ECw/viewform?embedded=true" title="AI workshop interest form" loading="lazy">Loading the form…</iframe>
+      </div>
+    </div>
+  </section>
 
   <section id="services">
     <div class="wrap">
@@ -298,25 +325,6 @@ footer .wrap { border-top: 1px solid rgba(255,255,255,.12); padding-top: 32px; }
           <button class="more" type="button" data-bio="bio-4">Read full bio</button>
           <a class="mail" href="mailto:vigneshmanikandan21@gmail.com">vigneshmanikandan21@<wbr>gmail.com</a>
         </article>
-      </div>
-    </div>
-  </section>
-
-  <section id="workshop">
-    <div class="wrap workshop">
-      <div class="intro">
-        <span class="label">Upcoming AI workshop</span>
-        <h2>Learn AI with us. <em class="ink">Tell us what you need.</em></h2>
-        <p>We’re planning a hands-on AI workshop and want to shape it around you. Take two minutes to tell us what you’d like to learn, and we’ll build the session around the answers.</p>
-        <ul class="asks">
-          <li><span>i.</span>What you want to learn — agents, automation, AI video, visuals or careers in AI</li>
-          <li><span>ii.</span>Your current level, from complete beginner to already building</li>
-          <li><span>iii.</span>The format and timing that work best for you</li>
-        </ul>
-        <a class="btn btn-dark" href="https://docs.google.com/forms/d/e/1FAIpQLSdOhxqB93n7zOKw4Zw4-auWqzR7NUHyOoUPzvlJFbhqSE-ECw/viewform" target="_blank" rel="noopener">Open the form in a new tab <span class="arrow" aria-hidden="true">&nearr;</span></a>
-      </div>
-      <div class="form-card">
-        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdOhxqB93n7zOKw4Zw4-auWqzR7NUHyOoUPzvlJFbhqSE-ECw/viewform?embedded=true" title="AI workshop interest form" loading="lazy">Loading the form…</iframe>
       </div>
     </div>
   </section>
