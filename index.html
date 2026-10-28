@@ -132,6 +132,17 @@ html:has(dialog[open]) { overflow: hidden; }
 .bio-links { margin-top: 28px; padding-top: 20px; border-top: 1px solid var(--line); display: flex; flex-wrap: wrap; gap: 8px 28px; font-size: 14px; font-weight: 600; color: var(--blue); }
 .bio-links a:hover { color: var(--navy); }
 
+/* workshop */
+.workshop { display: grid; grid-template-columns: 1fr 1.25fr; gap: clamp(32px, 5vw, 72px); align-items: start; }
+.workshop .intro { position: sticky; top: 110px; }
+.workshop h2 { font-size: clamp(40px, 5vw, 72px); line-height: 1; letter-spacing: -.03em; margin: 24px 0; }
+.workshop .intro > p { color: var(--muted); max-width: 460px; }
+.asks { list-style: none; margin: 28px 0 32px; padding: 0; border-top: 1px solid var(--line); }
+.asks li { display: flex; gap: 14px; padding: 14px 0; border-bottom: 1px solid var(--line); color: var(--muted); font-size: 15px; }
+.asks li span { font-family: var(--serif); font-style: italic; font-size: 20px; line-height: 1.2; color: var(--blue); min-width: 24px; }
+.form-card { border-radius: 28px; overflow: hidden; background: #fff; border: 1px solid var(--line); box-shadow: 0 40px 80px -50px rgba(7,18,51,.45); }
+.form-card iframe { display: block; width: 100%; height: 1000px; border: 0; }
+
 /* work */
 #work { background: var(--bg-2); }
 .work { display: grid; grid-template-columns: 1.1fr 1fr; gap: 64px; align-items: center; }
@@ -153,7 +164,8 @@ footer .wrap { border-top: 1px solid rgba(255,255,255,.12); padding-top: 32px; }
 
 @media (max-width: 960px) {
   .nav-links a:not(.btn) { display: none; }
-  .head, .hero-foot, .services li, .work { grid-template-columns: 1fr; gap: 20px; }
+  .head, .hero-foot, .services li, .work, .workshop { grid-template-columns: 1fr; gap: 20px; }
+  .workshop .intro { position: static; }
   .ctas { justify-content: flex-start; }
   .steps, .members { grid-template-columns: 1fr 1fr; }
 }
@@ -176,6 +188,7 @@ footer .wrap { border-top: 1px solid rgba(255,255,255,.12); padding-top: 32px; }
     <a href="#services">Services</a>
     <a href="#process">How we work</a>
     <a href="#team">Team</a>
+    <a href="#workshop">Workshop</a>
     <a href="#work">Work</a>
     <a href="#contact" class="btn btn-dark">Start a project <span class="arrow" aria-hidden="true">&rarr;</span></a>
   </div>
@@ -285,6 +298,25 @@ footer .wrap { border-top: 1px solid rgba(255,255,255,.12); padding-top: 32px; }
           <button class="more" type="button" data-bio="bio-4">Read full bio</button>
           <a class="mail" href="mailto:vigneshmanikandan21@gmail.com">vigneshmanikandan21@<wbr>gmail.com</a>
         </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="workshop">
+    <div class="wrap workshop">
+      <div class="intro">
+        <span class="label">Upcoming AI workshop</span>
+        <h2>Learn AI with us. <em class="ink">Tell us what you need.</em></h2>
+        <p>We’re planning a hands-on AI workshop and want to shape it around you. Take two minutes to tell us what you’d like to learn, and we’ll build the session around the answers.</p>
+        <ul class="asks">
+          <li><span>i.</span>What you want to learn — agents, automation, AI video, visuals or careers in AI</li>
+          <li><span>ii.</span>Your current level, from complete beginner to already building</li>
+          <li><span>iii.</span>The format and timing that work best for you</li>
+        </ul>
+        <a class="btn btn-dark" href="https://docs.google.com/forms/d/e/1FAIpQLSdOhxqB93n7zOKw4Zw4-auWqzR7NUHyOoUPzvlJFbhqSE-ECw/viewform" target="_blank" rel="noopener">Open the form in a new tab <span class="arrow" aria-hidden="true">&nearr;</span></a>
+      </div>
+      <div class="form-card">
+        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdOhxqB93n7zOKw4Zw4-auWqzR7NUHyOoUPzvlJFbhqSE-ECw/viewform?embedded=true" title="AI workshop interest form" loading="lazy">Loading the form…</iframe>
       </div>
     </div>
   </section>
